@@ -2,13 +2,13 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import {BsSearch} from 'react-icons/bs'
-import FiltersGroup from '../FiltersGroup'
 import Header from '../Header'
+import FiltersGroup from '../FiltersGroup'
 import JobCard from '../JobCard'
 
 import './index.css'
 
-const employmentTypesList = [
+const employmentTypeList = [
   {
     label: 'Full Time',
     employmentTypeId: 'FULLTIME',
@@ -27,7 +27,7 @@ const employmentTypesList = [
   },
 ]
 
-const salaryRangesList = [
+const salaryRangeList = [
   {
     salaryRangeId: '1000000',
     label: '10 LPA and above',
@@ -202,8 +202,8 @@ class Jobs extends Component {
         <div className="jobs-container">
           <div className="jobs-content">
             <FiltersGroup
-              employmentTypesList={employmentTypesList}
-              salaryRangesList={salaryRangesList}
+              employmentTypeList={employmentTypeList}
+              salaryRangeList={salaryRangeList}
               changeSearchInput={this.changeSearchInput}
               searchInput={searchInput}
               getJobs={this.getJobs}

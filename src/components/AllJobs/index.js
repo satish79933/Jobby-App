@@ -8,7 +8,7 @@ import Header from '../Header'
 import JobItem from '../JobItem'
 import './index.css'
 
-const employmentTypesList = [
+const employmentTypeList = [
   {
     label: 'Full Time',
     employmentTypeId: 'FULLTIME',
@@ -27,7 +27,7 @@ const employmentTypesList = [
   },
 ]
 
-const salaryRangesList = [
+const salaryRangeList = [
   {
     salaryRangeId: '1000000',
     label: '10 LPA and above',
@@ -283,7 +283,7 @@ class AllJobs extends Component {
 
   onGetCheckBoxView = () => (
     <ul className="check-boxes-container">
-      {employmentTypesList.map(eachItem => (
+      {employmentTypeList.map(eachItem => (
         <li className="li-container" key={eachItem.employmentTypeId}>
           <input
             className="input"
@@ -301,7 +301,7 @@ class AllJobs extends Component {
 
   onGetRadioButtonView = () => (
     <ul className="radio-button-container">
-      {salaryRangesList.map(eachItem => (
+      {salaryRangeList.map(eachItem => (
         <li className="li-container" key={eachItem.salaryRangeId}>
           <input
             className="radio"
